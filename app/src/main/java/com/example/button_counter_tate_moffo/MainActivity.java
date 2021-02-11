@@ -10,6 +10,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Alex Tate-Moffo
+ * Homework #1
+ * CSCI370 (Spring 2021)
+ *
+ * Button Counter App:
+ *      A simple app that allows the user to increment, decrement,
+ *      and reset a value displayed on screen.
+ *
+ *      Some code provided by Prof Briggs in class
+ *      All additions are entirely my own work
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     // Declare global variables
@@ -37,7 +50,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonSub = findViewById(R.id.buttonSubID);
+        buttonSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Increments the counter
+                decrementCounter();
+            }
+        });
 
+        buttonReset = findViewById(R.id.buttonResetID);
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Increments the counter
+                resetCounter();
+            }
+        });
 
     }
 
@@ -50,6 +79,28 @@ public class MainActivity extends AppCompatActivity {
         int currentValue = Integer.valueOf(textCounter.getText().toString());
         // increments the value
         currentValue++;
+        // sets the counter text object to the new value
+        textCounter.setText(String.valueOf(currentValue));
+    }
+
+    private void decrementCounter() {
+        Log.i(TAG, "Subtract button pressed");
+
+        // gets the current value of the counter text object
+        int currentValue = Integer.valueOf(textCounter.getText().toString());
+        // decrements the value
+        currentValue--;
+        // sets the counter text object to the new value
+        textCounter.setText(String.valueOf(currentValue));
+    }
+
+    private void resetCounter() {
+        Log.i(TAG, "Subtract button pressed");
+
+        // gets the current value of the counter text object
+        int currentValue = Integer.valueOf(textCounter.getText().toString());
+        // sets the value to zero
+        currentValue = 0;
         // sets the counter text object to the new value
         textCounter.setText(String.valueOf(currentValue));
     }
