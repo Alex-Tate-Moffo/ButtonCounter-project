@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicación de Contador de Botones (Tate-Moffo)</string>
+    <string name="reset">Reiniciar</string>
+    <string name="current_total">Total Actual:</string>
+</resources>

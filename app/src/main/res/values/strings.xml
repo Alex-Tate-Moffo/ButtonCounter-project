@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Button-Counter-Tate-Moffo</string>
+    <string name="app_name">Button Counter App (Tate-Moffo)</string>
+    <string name="reset">Reset</string>
+    <string name="current_total">Current Total:</string>
 </resources>

@@ -12,47 +12,65 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="42sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAddID"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.91" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonAddID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="48dp"
+        android:layout_height="53dp"
+        android:scaleX="1"
+        android:text="+"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toEndOf="@+id/textCounterID"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSubID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Subtract"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="47dp"
+        android:layout_height="53dp"
+        android:text="-"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintEnd_toStartOf="@+id/textCounterID"
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonResetID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
+        android:text="@string/reset"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCounterID"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/textTotalID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textCounterID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
